@@ -345,7 +345,7 @@ public class StudentgradecalculatorController implements Initializable {
             }
         });
     }
-    private void populateTable() {
+    public void populateTable() {
     try {
             con = mysqlconnect.ConnectionDb();
             if (con != null) {
