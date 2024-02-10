@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0" prefWidth="1241.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.studentgradecalculator.studentgradecalculator.StudentgradecalculatorController">
+   <children>
+      <TableView fx:id="tablestudent" editable="true" layoutX="327.0" layoutY="82.0" prefHeight="455.0" prefWidth="907.0">
+        <columns>
+          <TableColumn fx:id="tablecolumnID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tablecolumnStudent" prefWidth="91.33331298828125" text="student_name" />
+            <TableColumn fx:id="tablecolumncourse" prefWidth="81.99996948242188" text="course_name" />
+            <TableColumn fx:id="tablecolumnexam" prefWidth="98.6666259765625" text="exam_mark" />
+            <TableColumn fx:id="tablecolumnCA" prefWidth="98.66668701171875" text="CA_mark" />
+            <TableColumn fx:id="tablecolumnattendance" prefWidth="127.333251953125" text="attendance_mark" />
+            <TableColumn fx:id="tablecolumnaverage" prefWidth="106.0" text="average" />
+            <TableColumn fx:id="tablecolumnGPA" minWidth="0.0" prefWidth="76.0" text="Grade" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane layoutX="14.0" layoutY="87.0" prefHeight="511.0" prefWidth="305.0">
+         <children>
+            <TextField fx:id="txt_name" layoutX="139.0" layoutY="28.0" promptText="enter_name" />
+            <TextField fx:id="txt_course" layoutX="139.0" layoutY="74.0" promptText="course_name" />
+            <TextField fx:id="txt_mark" layoutX="138.0" layoutY="125.0" promptText="exam_mark" />
+            <Label layoutX="14.0" layoutY="32.0" text="student_name" />
+            <Label layoutX="14.0" layoutY="78.0" text="course_name" />
+            <Label layoutX="16.0" layoutY="141.0" text="exam_mark" />
+            <Label layoutX="19.0" layoutY="182.0" text="CA_mark" />
+            <Label layoutX="19.0" layoutY="245.0" prefHeight="18.0" prefWidth="109.0" text="attendance_mark" />
+            <TextField fx:id="txt_CA" layoutX="137.0" layoutY="187.0" promptText="CA_mark" />
+            <TextField fx:id="txt_attendance" layoutX="137.0" layoutY="241.0" promptText="attendance_mark" />
+            <Button fx:id="btn_add" layoutX="6.0" layoutY="412.0" mnemonicParsing="false" onAction="#Add" prefHeight="31.0" prefWidth="133.0" text="Add student info" />
+            <Button fx:id="btn_update" layoutX="7.0" layoutY="455.0" mnemonicParsing="false" onAction="#Update" text="update student  info" />
+            <Button fx:id="btn_clear" layoutX="188.0" layoutY="384.0" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="85.0" text="clear" />
+            <Label layoutX="20.0" layoutY="279.0" text="average" />
+            <TextField fx:id="txtavg" layoutX="129.0" layoutY="276.0" />
+            <Label layoutX="20.0" layoutY="314.0" text="grade" />
+            <TextField fx:id="txtgrade" layoutX="129.0" layoutY="319.0" />
+            <Button fx:id="btn_delete" layoutX="7.0" layoutY="369.0" mnemonicParsing="false" onAction="#Delete" prefHeight="31.0" prefWidth="133.0" text="Delete student info" />
+            <Button fx:id="btn_calcAv" layoutX="189.0" layoutY="422.0" mnemonicParsing="false" onAction="#classaverage" text="class average" />
+            <Button fx:id="btn_calc" layoutX="184.0" layoutY="460.0" mnemonicParsing="false" onAction="#calculation" prefHeight="31.0" prefWidth="133.0" text="calculate average" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="98.0" layoutY="11.0" prefHeight="45.0" prefWidth="305.0" text="Student grade Calculator system" textFill="#93a118">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <HBox layoutX="450.0" layoutY="14.0" prefHeight="62.0" prefWidth="259.0">
+         <children>
+            <Label prefHeight="46.0" prefWidth="82.0" text="class average" />
+            <TextField fx:id="txtclassAv" />
+         </children>
+      </HBox>
+      <TextField fx:id="txtsearch" layoutX="764.0" layoutY="44.0" onAction="#Search" prefHeight="25.0" prefWidth="467.0" promptText="search something" />
+      <Button layoutX="467.0" layoutY="558.0" mnemonicParsing="false" onAction="#showStudentsBelowThreshold" text="Belowthreshhold" />
+      <Button layoutX="592.0" layoutY="558.0" mnemonicParsing="false" onAction="#sortByAverages" prefHeight="31.0" prefWidth="97.0" text="sortAverage" />
+      <Button layoutX="704.0" layoutY="558.0" mnemonicParsing="false" onAction="#showTopPerformingStudents" prefHeight="31.0" prefWidth="119.0" text="topperformance" />
+   </children>
+</AnchorPane>
