@@ -14,14 +14,14 @@ import org.mockito.Mockito;
 import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
-class StudentgradecalculatorControllerTest {
+public class StudentgradecalculatorControllerTest {
     private StudentgradecalculatorController controller;
 
     @BeforeEach
     void setUp() {
-        //new JFXPanel();
+
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Studentgradecalculator.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/test resources/StudentgradecalculatorTest.fxml"));
             Parent root = loader.load();
             controller = loader.getController();
             Platform.runLater(() -> {
